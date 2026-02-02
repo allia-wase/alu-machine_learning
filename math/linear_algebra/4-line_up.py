@@ -4,14 +4,14 @@
 
 
 def add_arrays(arr1, arr2):
-    """ adds two arrays elementwise
-    """
-    if len(arr1) != len(arr2):
-       return None
+        """ adds two arrays elementwise
+            """
+                if len(arr1) != len(arr2):
+                            return None
 
-    result = []
+                            result = []
 
-    for num1, num2 in zip(arr1, arr2):
-        result.append(num1 + num2)
+                                for num1, num2 in zip(arr1, arr2):
+                                            result.append(num1 + num2)
 
-    return result
+                                                
