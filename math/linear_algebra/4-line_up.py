@@ -7,7 +7,7 @@ def add_arrays(arr1, arr2):
     """ adds two arrays elementwise
     """
     if len(arr1) != len(arr2):
-       return None
+        return None
 
     result = []
 
