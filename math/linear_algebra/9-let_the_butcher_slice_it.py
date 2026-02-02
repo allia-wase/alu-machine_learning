@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Matrix slicing helper functions (no numpy)"""
-
 def get_middle_rows(m):  # noqa
     return [] if not m else [row[:] for row in m[1:3]]
 
