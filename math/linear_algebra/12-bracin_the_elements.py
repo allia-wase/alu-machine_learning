@@ -1,36 +1,22 @@
 #!/usr/bin/env python3
-"""Performs elementwise operations on two 2D matrices (lists)."""
+"""Element-wise numpy ops."""
+
+import numpy as np
 
 
 def np_elementwise(mat1, mat2):
-    """Return tuple (sum, difference, product, quotient) of two matrices.
+    """Compute element-wise sum, difference, product, quotient.
 
-    Returns None if the matrices have mismatched dimensions.
+    Returns:
+        tuple: (mat1 + mat2, mat1 - mat2, mat1 * mat2, mat1 / mat2)
+        None: if inputs are not 2D or shapes differ
     """
-    if mat1 == [] or mat2 == []:
+    a = np.array(mat1)
+    b = np.array(mat2)
+
+    if a.ndim != 2 or b.ndim != 2:
+        return None
+    if a.shape != b.shape:
         return None
 
-    if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
-        return None
-
-    rows = len(mat1)
-    cols = len(mat1[0])
-
-    sum_m = [
-        [mat1[i][j] + mat2[i][j] for j in range(cols)]
-        for i in range(rows)
-    ]
-    diff_m = [
-        [mat1[i][j] - mat2[i][j] for j in range(cols)]
-        for i in range(rows)
-    ]
-    prod_m = [
-        [mat1[i][j] * mat2[i][j] for j in range(cols)]
-        for i in range(rows)
-    ]
-    quot_m = [
-        [mat1[i][j] / mat2[i][j] for j in range(cols)]
-        for i in range(rows)
-    ]
-
-    return sum_m, diff_m, prod_m, quot_m
+    return a + b, a - b, a * b, a / b
