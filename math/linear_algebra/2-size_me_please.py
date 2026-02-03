@@ -6,7 +6,7 @@
 
 def matrix_shape(matrix):
     '''
-        calculates the shape of a matrix
+        Calculates the shape of a matrix
     '''
     mat_shape = []
     while isinstance(matrix, list):

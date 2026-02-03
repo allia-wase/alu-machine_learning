@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""Implements the np_shape function without numpy."""
+""" implements the np_shape function
+"""
 
 
 def np_shape(matrix):
-    """Return the shape of `matrix` as a tuple (rows, cols).
-
-    For an empty matrix ([]) return (0,).
+    """ returns the shape of a numpy nd.array
     """
-    if matrix == []:
-        return (0,)
-    return (len(matrix), len(matrix[0]))
+    return matrix.shape
